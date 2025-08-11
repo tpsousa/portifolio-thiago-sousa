@@ -198,6 +198,12 @@ nav {
   box-shadow: inset 0 0 15px #0d47a1;
 }
 
+.experiencia{
+  font-size: 20px;
+}
+.experiencias .experiencia p{
+  font-size: 20px;
+}
 .listagem {
   list-style: none;
   display: grid;
@@ -348,6 +354,8 @@ nav {
 }
 
 .h1-experiencias {
+  font: 30px;
+  color: #61dafb;
   padding: 5px;
   margin: 5px;
 }
@@ -638,12 +646,13 @@ nav {
   }
 }
 
+/* contatos perto do footer */
 .contatos {
   display: flex;
   gap: 2rem;
   align-items: center;
   justify-content: center;
-  font-size: 1rem;
+  font-size: 2rem;
   padding: 0.5rem 1.2rem;
   border-radius: 25px;
   color: #61dafb;
@@ -652,6 +661,8 @@ nav {
   font-weight: 600;
   
 }
+
+
 
 /* #0f0f0f, #242222 */
 /* estilizacao sobre mim */
@@ -722,4 +733,49 @@ nav {
   }
 }
 
+/* soft skills section */
 
+/* Seção Soft Skills */
+.soft-skills {
+  background-color: #121212; /* Azul bem escuro */
+  color: #e0e0e0;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.soft-skills h2 {
+  font-size: 2.2rem;
+  margin-bottom: 40px;
+  color: #ffffff; /* Azul tecnológico */
+}
+
+.skills-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.skill-card {
+  background: #121212;
+  padding: 30px 20px;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.skill-card i {
+  font-size: 2.5rem;
+  color: #61dafb;
+  margin-bottom: 15px;
+}
+
+.skill-card h3 {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.skill-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,170,255,0.3);
