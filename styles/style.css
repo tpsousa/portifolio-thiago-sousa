@@ -41,7 +41,7 @@ body {
 /* HEADER */
 .heade-line {
   padding: 2rem 3rem;
-  background: #181818;
+  background: #121212;
   box-shadow: 0 2px 10px rgba(0,0,0,0.7);
   display: flex;
   flex-direction: column;
@@ -420,7 +420,7 @@ nav {
 .heade-line {
 
   padding: 2rem 3rem;
-  background: #181818;
+  background: #121212;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
   display: flex;
   flex-direction: column;
@@ -471,8 +471,8 @@ nav {
 
 /* Foto de perfil */
 .foto-perfil {
-  width: 140px;
-  height: 140px;
+  width: 200px;
+  height: 200px;
   border-radius: 50%;
   object-fit: cover;
   border: 3px solid #00bfff;
@@ -529,7 +529,7 @@ nav {
 
 /* Sobre mim */
 .sobre-mim {
-  font-size: 1.1rem;
+  font-size: 2.1rem;
   max-width: 700px;
   line-height: 1.5;
   color: #ccc;
@@ -604,16 +604,21 @@ nav {
 /* diminuir header */
 
 
-
+/* responsividade celular */
 @media (max-width: 720px) {
   .heade-line {
-    position: initial;
+    position: sticky;
     /* background-color:black; */
-    height: 400px; /* menor para mobile */
+    height: 450px; /* menor para mobile */
+    background-color: #121212;
   }
 
 
-
+  .link {
+    display: flex;
+    flex-direction: row;
+    border-radius: 5px;
+  }
   .sobre-mim{
     display: none;
   }
@@ -623,7 +628,7 @@ nav {
   }
 
   /* Espaço para o conteúdo ficar abaixo do header */
-  main, 
+  /*main */
   section, 
   .tecnologies, 
   .experiencias, 
@@ -632,3 +637,89 @@ nav {
     padding-top: 80px; /* mesmo valor da altura do header */
   }
 }
+
+.contatos {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  padding: 0.5rem 1.2rem;
+  border-radius: 25px;
+  color: #61dafb;
+  transition: all 0.3s ease;
+  user-select: none;
+  font-weight: 600;
+  
+}
+
+/* #0f0f0f, #242222 */
+/* estilizacao sobre mim */
+.sobre-section {
+  background: linear-gradient(to right, #121212, #121212);
+  padding: 60px 20px;
+  font-family: 'Inter', sans-serif;
+  color: #e0e0e0;
+}
+
+.sobre-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 1100px;
+  margin: 0 auto;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.sobre-img img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  box-shadow: 0 0 15px rgba(2, 53, 129, 0.5);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.sobre-img img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(6, 114, 238, 0.8)
+}
+
+.sobre-texto {
+  max-width: 600px;
+}
+
+.sobre-texto h2 {
+  font-size: 2rem;
+  color: #fdfdfd;
+  margin-bottom: 15px;
+  border-left: 4px solid #ffffff;
+  padding-left: 12px;
+}
+
+.sobre-texto p {
+  font-size: 1.50rem;
+  line-height: 1.7;
+  color: #cccccc;
+}
+
+.sobre-texto p::first-letter {
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .sobre-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .sobre-texto h2 {
+    border-left: none;
+    padding-left: 0;
+  }
+}
+
+
