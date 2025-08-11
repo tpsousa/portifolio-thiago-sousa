@@ -618,7 +618,7 @@ nav {
   .heade-line {
     position: sticky;
     /* background-color:black; */
-    height: 450px; /* menor para mobile */
+    height: 425px; /* menor para mobile */
     background-color: #121212;
   }
 
