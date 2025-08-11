@@ -408,6 +408,7 @@ nav {
 }
 
 .item-formacao .instituicao {
+  font-size: 20px;
   color: #64b5f6;
   font-weight: 500;
 }
@@ -419,7 +420,7 @@ nav {
 
 .item-formacao p {
   color: #ccc;
-  font-size: 0.95rem;
+  font-size: 1.3rem;
   margin-top: 0.5rem;
   line-height: 1.4;
 }
