@@ -434,7 +434,7 @@ nav {
   display: flex;
   flex-direction: column;
   align-items: center;
-  position: sticky;
+  position: initial;
   top: 0;
   z-index: 100;
 }
@@ -616,12 +616,11 @@ nav {
 /* responsividade celular */
 @media (max-width: 720px) {
   .heade-line {
-    position: sticky;
+    position: initial;
     /* background-color:black; */
     height: 425px; /* menor para mobile */
     background-color: #121212;
   }
-
 
   .link {
     display: flex;
@@ -634,6 +633,14 @@ nav {
 
   .side-bar{
     display: none;
+  }
+  
+  .side-bar{
+    font-size: 1rem;
+  }
+  .foto-perfil{
+    width: 150px;
+    height: 150px;
   }
 
   /* Espaço para o conteúdo ficar abaixo do header */
@@ -732,6 +739,8 @@ nav {
     border-left: none;
     padding-left: 0;
   }
+
+   
 }
 
 /* soft skills section */
@@ -780,3 +789,4 @@ nav {
 .skill-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 20px rgba(0,170,255,0.3);
+}
