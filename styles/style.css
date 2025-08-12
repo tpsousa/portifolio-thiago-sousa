@@ -188,7 +188,7 @@ nav {
   outline: none;
 }
 
-/* EXPERIENCIAS */
+/* EXPERIENCIAS */  
 .experiencias {
   max-width: 960px;
   margin: 3rem auto;
@@ -206,8 +206,9 @@ nav {
 }
 .listagem {
   list-style: none;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  display: flex ;
+  /* .h1-experiencias: repeat(auto-fit, minmax(280px, 1fr)); */
+  flex-direction: column;
   gap: 1.5rem;
 }
 
@@ -245,9 +246,10 @@ nav {
 
 .list-projects {
   list-style: none;
-  display: grid;
+  display: flex;
   gap: 2rem;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  flex-direction: column;
+  /* grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); */
 }
 
 .list-projects li#projeto {
@@ -297,6 +299,18 @@ nav {
   margin: 5px;
   padding: 5px;
 }
+
+.img-projects{
+  width: 100px;
+  height: 100px;
+}
+
+@media (max-width : ){
+  .img-projects{
+    
+  }
+}
+
 /* FOOTER */
 .footer {
   padding: 2rem 3rem;
@@ -455,7 +469,7 @@ nav {
 
 .side-bar li a {
   font-weight: 600;
-  font-size: 1.1rem;
+  font-size: 2.0rem;
   padding: 0.5rem 1rem;
   border-radius: 5px;
   background-color: transparent;
