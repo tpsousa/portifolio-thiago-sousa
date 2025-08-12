@@ -301,15 +301,13 @@ nav {
 }
 
 .img-projects{
-  width: 100px;
-  height: 100px;
+  display: flex;
+  position: initial;
+  width: 140px;
+  height: 125px;
+  border-radius: 5px;
 }
 
-@media (max-width : ){
-  .img-projects{
-    
-  }
-}
 
 /* FOOTER */
 .footer {
@@ -657,6 +655,12 @@ nav {
     height: 150px;
   }
 
+  .menu {
+    display: block;
+    align-items: initial;
+    justify-content: initial;
+  }
+
   /* Espaço para o conteúdo ficar abaixo do header */
   /*main */
   section, 
@@ -667,6 +671,8 @@ nav {
     padding-top: 80px; /* mesmo valor da altura do header */
   }
 }
+
+
 
 /* contatos perto do footer */
 .contatos {
@@ -681,10 +687,7 @@ nav {
   transition: all 0.3s ease;
   user-select: none;
   font-weight: 600;
-  
 }
-
-
 
 /* #0f0f0f, #242222 */
 /* estilizacao sobre mim */
