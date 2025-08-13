@@ -11,7 +11,7 @@
 <body>
   <header class="heade-line">
     <div class="menu">
-    <img src="imagens/icons8-cardápio-24.png" alt="">
+  
 </div>
     <nav>
       <ul class="side-bar">
@@ -63,7 +63,7 @@
         <div class="sobre-texto">
           <h2>Sobre mim</h2>
           <p>
-            Desde cedo me interessei pela tecnologia e desenvolvimento de software. Comecei estudando lógica de programação e, ao longo dos anos, desenvolvi habilidades focadas em back-end. Atualmente, sou estudante de Ciência da Computação na UFMA e busco criar soluções escaláveis, seguras e eficientes.
+     Olá! Me chamo Thiago, tenho 20 anos e desde cedo desenvolvi interesse pela área de tecnologia. Sempre gostei de resolver problemas e entender como o computador funciona, especialmente no desenvolvimento de software. Comecei estudando lógica de programação e, com o tempo, aprimorei meus conhecimentos em tecnologias voltadas ao desenvolvimento back-end. Além disso, tenho grande interesse por algoritmos e estudo programação competitiva como hobby 
           </p>
         </div>
         <div class="sobre-img">
@@ -142,18 +142,26 @@
       </ul>
     </section>
     
-    <section class="publicacoes">
-       <div class="card">
-          <p class="publi-data"></p>
-          <img src="" alt="">
-           <h1>titulo da publicacao</h1>
-           <p class="publi-descricao"></p>
-          
-       </div>
-       <div class="card">
+   <section class="publicacoes">
+  <div class="card">
+    <p class="publi-data">12/08/2025</p>
+    <img src="imagens/exemplo-publicacao.jpg" alt="Imagem da publicação">
+    <h1 class="publi-titulo">Título da Publicação</h1>
+    <p class="publi-descricao">
+      Pequena descrição da publicação, artigo ou material.
+    </p>
+  </div>
 
-       </div>
-    </section>
+  <div class="card">
+    <p class="publi-data">05/08/2025</p>
+    <img src="imagens/exemplo2.jpg" alt="Imagem da publicação">
+    <h1 class="publi-titulo">Outra Publicação</h1>
+    <p class="publi-descricao">
+      Breve resumo que explique o conteúdo para o visitante.
+    </p>
+  </div>
+</section>
+
     <section class="projects">
       <h1 class="h1-projetos">Projetos:</h1>
       <ul class="list-projects">
@@ -202,23 +210,16 @@
   </a>
 </section>
 
-
-<section class="form">
- 
-  <div class="form-input">
-     <p>entre em contato comigo :) </p>
-     <label for="email">email:</label>
-     <input type="text" id="email">
-
-     <label for="passowrd">senha:</label>
-     <input type="password" id="number"> 
-
-     <input type="text" name="text" id="form-text">
-
-     <button onclick="sendMensage()" id="form-button">enviar mensagem</button>
-
-  </div>
+<section class="contato">
+  <h2>Entre em Contato</h2>
+  <form class="contato-form" action="mailto:seuemail@exemplo.com" method="POST" enctype="text/plain">
+    <input type="text" name="nome" placeholder="Seu nome" required>
+    <input type="email" name="email" placeholder="Seu email" required>
+    <textarea name="mensagem" placeholder="Digite sua mensagem..." required></textarea>
+    <button type="submit">Enviar</button>
+  </form>
 </section>
+
 
 </main>
 
