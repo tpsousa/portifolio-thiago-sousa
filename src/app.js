@@ -1,7 +1,4 @@
 
-
-
-
 /* document.getElementById('btnDownload').addEventListener("click", function (){
 
     const urlCurriculo = "curriculo.pdf";
@@ -27,3 +24,10 @@ const sidebar = document.getElementById('side-bar');
 menuIcone.addEventListener('click', () => {
   sidebar.classList.toggle('active');
 });
+
+const form = document.getElementById('contato');
+
+form.addEventListener("click",()=>{
+  
+});
+
