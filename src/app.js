@@ -2,7 +2,7 @@
 
 
 
-document.getElementById('btnDownload').addEventListener("click", function (){
+/* document.getElementById('btnDownload').addEventListener("click", function (){
 
     const urlCurriculo = "curriculo.pdf";
     
@@ -17,13 +17,13 @@ document.getElementById('btnDownload').addEventListener("click", function (){
     link.click();
 
     document.body.removeChild(link);
-})
+}) */
 
 //pegar a menu e a side bar,para quando o usuario clicar no menu aparecer a side bar
 
-const menu = document.getElementById("menu");
-const sideBar = document.getElementById("side-bar");
+const menuIcone = document.getElementById('menu-icone');
+const sidebar = document.getElementById('side-bar');
 
-menu.addEventListener("click" , function () {
-  sideBar.classList.show('side-bar');
-})
+menuIcone.addEventListener('click', () => {
+  sidebar.classList.toggle('active');
+});

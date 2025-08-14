@@ -937,3 +937,65 @@ nav {
     padding: 1rem;
   }
 }
+
+
+/* logica de menu e sidebar */
+
+.menu-icone {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+  color: #333;
+  padding: 10px;
+}
+@media screen and (max-width: 768px) {
+  .side-bar {
+    flex-direction: column;       /* vertical */
+    position: fixed;              /* fixa na tela */
+    top: 0;
+    left: -250px;                 /* esconde fora da tela */
+    width: 200px;
+    height: 100vh;
+    background-color: #333;
+    padding-top: 60px;
+    gap: 1.5rem;
+    transition: left 0.3s ease;
+    z-index: 1000;
+  }
+
+  /* Quando o menu está ativo */
+  .side-bar.active {
+    left: 0;                      /* desliza para dentro */
+  }
+
+  .side-bar li a {
+    color: #fff;
+    font-size: 1.5rem;
+  }
+
+  .menu-icone {
+    display: block;               /* mostra o ícone */
+    cursor: pointer;
+  }
+}
+
+/* doidera */
+@media screen and (max-width: 768px) {
+  .side-bar {
+    position: fixed; /* importante */
+    top: 0;
+    left: -250px;   /* escondida inicialmente */
+    width: 200px;
+    height: 100vh;
+    background-color: #333;
+    flex-direction: column;
+    padding-top: 60px;
+    gap: 1.5rem;
+    transition: left 0.3s ease;
+    z-index: 1000;  /* acima do header */
+  }
+
+  .side-bar.active {
+    left: 0;
+  }
+}
