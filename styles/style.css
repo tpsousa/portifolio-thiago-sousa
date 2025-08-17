@@ -811,15 +811,20 @@ nav {
 
 /* ==========publicacao===========*/ 
 .publicacoes {
-  max-width: 960px;
-  margin: 3rem auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+
+  max-width: 100%;
+  /*margin: 3rem auto; */
+  margin : 0px;
+  display: flex;
   gap: 1.5rem;
   padding: 1rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
 }
 
 .card {
+  flex: 0 0 280px; /* largura fixa mínima */
   background: #1f1f1f;
   border-radius: 12px;
   box-shadow: inset 0 0 15px #0d47a1, 0 0 8px rgba(13, 71, 161, 0.4);
@@ -829,19 +834,12 @@ nav {
   align-items: center;
   text-align: center;
   transition: transform 0.2s ease, box-shadow 0.3s ease;
+  scroll-snap-align: start;
 }
 
 .card:hover {
   transform: translateY(-4px);
   box-shadow: inset 0 0 20px #0d47a1, 0 0 15px rgba(13, 71, 161, 0.6);
-}
-
-.card img {
-  width: 100%;
-  height: 160px;
-  object-fit: cover;
-  border-radius: 8px;
-  margin-bottom: 0.8rem;
 }
 
 .publi-data {
@@ -862,12 +860,24 @@ nav {
   line-height: 1.4;
 }
 
-/* Responsividade */
-@media (max-width: 720px) {
-  .publicacoes {
-    grid-template-columns: 1fr;
-  }
+/* Estilização da barra de rolagem */
+.publicacoes::-webkit-scrollbar {
+  height: 8px;
 }
+
+.publicacoes::-webkit-scrollbar-thumb {
+  background: #0d47a1;
+  border-radius: 4px;
+}
+
+.publicacoes::-webkit-scrollbar-track {
+  background: #121212;
+}
+
+#h1-public {
+  margin: 0px 5px 0px;
+}
+
 
 /* ==========formulario de contato ===== */
 
@@ -998,4 +1008,3 @@ nav {
   .side-bar.active {
     left: 0;
   }
-}
