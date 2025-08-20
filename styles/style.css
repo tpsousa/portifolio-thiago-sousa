@@ -1042,3 +1042,26 @@ nav {
     left: 0;
   }
 }
+
+/*.experiencia {
+  display: flex;
+  justify-content: space-between;
+  margin: 5px;
+} */
+
+.experiencia img{
+  display: flex;
+  align-items: initial;
+  width: 100px;
+  height: 100px;
+  margin: 5px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  object-fit: cover;
+  /*border: 3px solid #00bfff; */
+  /*box-shadow: 0 0 20px rgba(0, 191, 255, 0.6); */
+  /*animation: brilhoBorda 3s ease-in-out infinite; */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  flex-shrink: 0;
+}
