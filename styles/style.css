@@ -234,6 +234,28 @@ nav {
   line-height: 1.4;
 }
 
+/* caixinhas das ferramentas e tecnologias que foram utilizadas :*/
+
+.tech-stack {
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tech-stack span {
+   background-color: #0d47a1; 
+  /*background-color: #12121212; */
+  color: #ffffff;
+  padding: 0.3rem 0.8rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  box-shadow: 0 2px 6px rgba(13, 71, 161, 0.4);
+  white-space: nowrap;
+}
+
+
 /* PROJECTS */
 .projects {
   max-width: 960px;
