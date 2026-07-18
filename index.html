@@ -267,88 +267,130 @@
 
 </section>
 
-
-
 <section class="projects">
   <h1 class="h1-projetos">Projetos:</h1>
   <div class="list-projects-container">
     <ul class="list-projects">
-        <li class="projeto">
-  <img src="imagens/caixa-pandoraa.png" alt="Imagem do projeto Caixa de Pandora" class="img-projects">
-  <strong>Caixa de Pandora</strong>
-  <p>Sistema backend seguro para armazenamento de dados sensíveis que se autodestroem após o tempo ou número de acessos definidos. Ideal para senhas temporárias, provas e mensagens privadas.</p>
-  <p>tecnologias: Node.js, TypeScript, Express, PostgreSQL, JWT</p>
-  <a href="https://github.com/tpsousa/caixa-de-pandora" target="_blank" rel="noopener noreferrer">link para projeto</a>
-</li>
 
-<li class="projeto">
-  <img src="imagens/vendas-back.png" alt="Backend de Vendas Online" class="img-projects">
-  <strong>Vendas Online — Backend</strong>
-  <p>Repositório backend para um sistema de vendas online, desenvolvido com o framework <strong>NestJS</strong> em <strong>Node.js</strong> e <strong>TypeScript</strong>, garantindo escalabilidade e eficiência no lado do servidor.</p>
-  <p>Recursos: configuração de controllers (como criação de usuários), testes unitários e de integração, além de suporte para desenvolvimento em diferentes modos (dev, watch e produção). O projeto segue boas práticas de organização e qualidade de código com ESLint e Prettier.</p>
-  <p>Propósito: servir como base sólida para aplicações de vendas online, explorando a arquitetura modular do NestJS e demonstrando como estruturar uma API escalável e testável.</p>
-  <p>Tecnologias: Node.js, NestJS, TypeScript, Jest</p>
-  <a href="https://github.com/tpsousa/vendas-online-backend" target="_blank" rel="noopener noreferrer">link para o projeto</a>
-</li>
- 
-<li class="projeto">
-  <img src="imagens/algedata.png" alt="Algoritmos e Estruturas de Dados" class="img-projects">
-  <strong>Algorithms and Data Structures</strong>
-  <p>Repositório com algoritmos fundamentais e avançados, além de estruturas de dados chave, implementados em várias linguagens.</p>
-  <p>Conteúdo: QuickSort, MergeSort, HeapSort, Binary Search, DFS, Arrays, Listas Ligadas, Pilhas, Filas, Árvores, Grafos, Tabelas Hash, Programação Dinâmica.</p>
-  <p>Tecnologias: Python, JavaScript, TypeScript</p>
-  <a href="https://github.com/SEU_USUARIO/algorithms-data-structures" target="_blank" rel="noopener noreferrer">link para o projeto</a>
-</li>
-    <li class="projeto">
-  <img src="imagens/sqlmanagement.png" alt="API de Gerenciamento de Usuários com Sequelize e MySQL" class="img-projects">
-  <strong>API User Management — Sequelize & MySQL</strong>
-  <p>API desenvolvida para gerenciamento de usuários, implementando operações de CRUD (Create, Read, Update, Delete) com o ORM <strong>Sequelize</strong> e banco de dados <strong>MySQL</strong>.</p>
-  <p>Recursos: organização em camadas (<em>models</em>, <em>views</em> e configuração de banco), integração com Sequelize para mapear entidades e consultas, além de endpoints REST para manipulação de dados de usuários.</p>
-  <p>Propósito: demonstrar como construir uma API estruturada utilizando ORM, conectando o Node.js a bancos relacionais de forma prática e eficiente.</p>
-  <p>Tecnologias: Node.js, Express, Sequelize, MySQL</p>
-  <a href="https://github.com/tpsousa/api-user-management-sequelize-mySQL" target="_blank" rel="noopener noreferrer">link para o projeto</a>
-</li>
-  <li class="projeto">
-  <img src="imagens/contaBancariaJava.png" alt="Projeto Conta Bancária em Java" class="img-projects">
-  <strong>Conta Bancária — Java</strong>
-  <p>Projeto simples em <strong>Java</strong> que simula uma conta bancária, permitindo operações básicas como criação de conta, consulta de saldo e manipulação de dados financeiros.</p>
-  <p>Recursos: classes organizadas para representar a conta bancária (<em>ContaBancaria</em>, <em>ContaCorrente</em>) e um programa principal para executar operações como depósitos, saques e consulta de saldo.</p>
-  <p>Propósito: exercitar os conceitos de Programação Orientada a Objetos em Java, como encapsulamento, métodos e interação entre classes.</p>
-  <p>Tecnologias: Java</p>
-  <a href="https://github.com/tpsousa/ContaBancaria-java" target="_blank" rel="noopener noreferrer">link para o projeto</a>
-</li>
+      <!-- ===== Projetos novos ===== -->
+
+      <li class="projeto">
+        <img src="imagens/aether.png" alt="Imagem do projeto Aether" class="img-projects">
+        <strong>Aether — Interpretador de Linguagem de Script</strong>
+        <p>IDE com interpretador embutido para uma linguagem de script simplificada, desenvolvida em Java. Realiza análise léxica e sintática, e execução de comandos com suporte a variáveis, expressões aritméticas, estruturas condicionais e laços de repetição.</p>
+        <p>Arquitetura baseada nos padrões <strong>Visitor</strong>, <strong>Facade</strong> e <strong>MVC</strong>, com interface gráfica em Swing.</p>
+        <p>tecnologias: Java, Swing</p>
+        <a href="#" target="_blank" rel="noopener noreferrer">link para o projeto</a>
+        <!-- TODO: substituir "#" pelo link do repositório -->
+      </li>
+
+      <li class="projeto">
+        <img src="imagens/foodfast.png" alt="Imagem do projeto FoodFast" class="img-projects">
+        <strong>FoodFast</strong>
+        <p>Sistema de gestão de pedidos para restaurantes delivery com múltiplas filiais. Centraliza clientes, cardápio, pedidos, estoque e entregas, com uso de constraints, triggers e funções em PostgreSQL para automatizar regras de negócio.</p>
+        <p>tecnologias: PostgreSQL, SQL (DDL/DML), PL/pgSQL</p>
+        <a href="https://github.com/tpsousa/foodfast-db" target="_blank" rel="noopener noreferrer">link para o projeto</a>
+      </li>
+
+      <li class="projeto">
+        <img src="imagens/dimensionamento.png" alt="Imagem do projeto Desafio de Dimensionamento de Retiradas" class="img-projects">
+        <strong>Desafio de Dimensionamento de Retiradas — Filial 7 (Grupo Mateus)</strong>
+        <p>Solução de análise de dados para dimensionar diariamente a quantidade de produtos a retirar dos freezers, considerando histórico de vendas, validade após descongelamento, lead time operacional e capacidade dos freezers — reduzindo desperdício e falta de estoque.</p>
+        <p>tecnologias: Python, Pandas, Scikit-learn, Prophet</p>
+        <a href="https://github.com/tpsousa/sistema-dimensionamento" target="_blank" rel="noopener noreferrer">link para o projeto</a>
+      </li>
+
+      <li class="projeto">
+        <img src="imagens/rotas-protegidas.png" alt="Imagem do projeto APIS-ROTAS-PROTEGIDAS" class="img-projects">
+        <strong>APIS-ROTAS-PROTEGIDAS</strong>
+        <p>Sistema de rotas protegidas em Node.js e Express, com middleware de autenticação que valida token JWT antes de liberar acesso a rotas restritas. Inclui registro e login de usuário.</p>
+        <p>tecnologias: Node.js, Express, JWT</p>
+        <a href="#" target="_blank" rel="noopener noreferrer">link para o projeto</a>
+        <!-- TODO: substituir "#" pelo link do repositório -->
+      </li>
+
+      <!-- ===== Projetos existentes ===== -->
+
+      <li class="projeto">
+        <img src="imagens/caixa-pandoraa.png" alt="Imagem do projeto Caixa de Pandora" class="img-projects">
+        <strong>Caixa de Pandora</strong>
+        <p>Sistema backend seguro para armazenamento de dados sensíveis que se autodestroem após o tempo ou número de acessos definidos. Ideal para senhas temporárias, provas e mensagens privadas.</p>
+        <p>tecnologias: Node.js, TypeScript, Express, PostgreSQL, JWT</p>
+        <a href="https://github.com/tpsousa/caixa-de-pandora" target="_blank" rel="noopener noreferrer">link para projeto</a>
+      </li>
+
+      <li class="projeto">
+        <img src="imagens/vendas-back.png" alt="Backend de Vendas Online" class="img-projects">
+        <strong>Vendas Online — Backend</strong>
+        <p>Repositório backend para um sistema de vendas online, desenvolvido com o framework <strong>NestJS</strong> em <strong>Node.js</strong> e <strong>TypeScript</strong>, garantindo escalabilidade e eficiência no lado do servidor.</p>
+        <p>Recursos: configuração de controllers (como criação de usuários), testes unitários e de integração, além de suporte para desenvolvimento em diferentes modos (dev, watch e produção). O projeto segue boas práticas de organização e qualidade de código com ESLint e Prettier.</p>
+        <p>Propósito: servir como base sólida para aplicações de vendas online, explorando a arquitetura modular do NestJS e demonstrando como estruturar uma API escalável e testável.</p>
+        <p>Tecnologias: Node.js, NestJS, TypeScript, Jest</p>
+        <a href="https://github.com/tpsousa/vendas-online-backend" target="_blank" rel="noopener noreferrer">link para o projeto</a>
+      </li>
+
+      <li class="projeto">
+        <img src="imagens/algedata.png" alt="Algoritmos e Estruturas de Dados" class="img-projects">
+        <strong>Algorithms and Data Structures</strong>
+        <p>Repositório com algoritmos fundamentais e avançados, além de estruturas de dados chave, implementados em várias linguagens.</p>
+        <p>Conteúdo: QuickSort, MergeSort, HeapSort, Binary Search, DFS, Arrays, Listas Ligadas, Pilhas, Filas, Árvores, Grafos, Tabelas Hash, Programação Dinâmica.</p>
+        <p>Tecnologias: Python, JavaScript, TypeScript</p>
+        <a href="https://github.com/SEU_USUARIO/algorithms-data-structures" target="_blank" rel="noopener noreferrer">link para o projeto</a>
+      </li>
+
+      <li class="projeto">
+        <img src="imagens/sqlmanagement.png" alt="API de Gerenciamento de Usuários com Sequelize e MySQL" class="img-projects">
+        <strong>API User Management — Sequelize & MySQL</strong>
+        <p>API desenvolvida para gerenciamento de usuários, implementando operações de CRUD (Create, Read, Update, Delete) com o ORM <strong>Sequelize</strong> e banco de dados <strong>MySQL</strong>.</p>
+        <p>Recursos: organização em camadas (<em>models</em>, <em>views</em> e configuração de banco), integração com Sequelize para mapear entidades e consultas, além de endpoints REST para manipulação de dados de usuários.</p>
+        <p>Propósito: demonstrar como construir uma API estruturada utilizando ORM, conectando o Node.js a bancos relacionais de forma prática e eficiente.</p>
+        <p>Tecnologias: Node.js, Express, Sequelize, MySQL</p>
+        <a href="https://github.com/tpsousa/api-user-management-sequelize-mySQL" target="_blank" rel="noopener noreferrer">link para o projeto</a>
+      </li>
+
+      <li class="projeto">
+        <img src="imagens/contaBancariaJava.png" alt="Projeto Conta Bancária em Java" class="img-projects">
+        <strong>Conta Bancária — Java</strong>
+        <p>Projeto simples em <strong>Java</strong> que simula uma conta bancária, permitindo operações básicas como criação de conta, consulta de saldo e manipulação de dados financeiros.</p>
+        <p>Recursos: classes organizadas para representar a conta bancária (<em>ContaBancaria</em>, <em>ContaCorrente</em>) e um programa principal para executar operações como depósitos, saques e consulta de saldo.</p>
+        <p>Propósito: exercitar os conceitos de Programação Orientada a Objetos em Java, como encapsulamento, métodos e interação entre classes.</p>
+        <p>Tecnologias: Java</p>
+        <a href="https://github.com/tpsousa/ContaBancaria-java" target="_blank" rel="noopener noreferrer">link para o projeto</a>
+      </li>
 
       <li class="projeto">
         <img src="imagens/prophetpython (1).png" alt="" class="img-projects">
         <strong>Algoritmo Preditivo com Prophet</strong>
         <p>Ferramenta de previsão de séries temporais com Python e Prophet, aplicável em análise de vendas e demanda.</p>
-        <p>tecnologias: python,pandas,sklearn, matplotlib</p>
+        <p>tecnologias: python, pandas, sklearn, matplotlib</p>
         <a href="https://github.com/tpsousa/preditivo.git" target="_blank" rel="noopener noreferrer">link para o projeto</a>
       </li>
+
       <li class="projeto">
         <img src="imagens/maximum-clique.png" alt="" class="img-projects">
         <strong>Maior Comunidade Conectada Heurística</strong>
         <p>Projeto de análise e otimização de redes usando heurísticas, focado em conectividade.</p>
-        <p>tecnologias: C </p>
+        <p>tecnologias: C</p>
         <a href="https://github.com/tpsousa/trabalho-final-lp1" target="_blank" rel="noopener noreferrer">link para o projeto</a>
       </li>
-       <li class="projeto">
-  <img src="imagens/api-playlist.png" alt="Projeto APIs Playlist" class="img-projects">
-  <strong>APIS-PLAYLIST</strong>
-  <p>API RESTful em Node.js e Express para gerenciar playlists de música, com autenticação e autorização via JWT.</p>
-  <p>tecnologias: Node.js, Express, JWT, Postman</p>
-  <a href="https://github.com/tpsousa/api_playlist" target="_blank" rel="noopener noreferrer">ver projeto</a>
-</li>
 
-<li class="projeto">
-  <img src="imagens/arquitetura_mvc.png" alt="Aplicativo de Blog Simples com arquitetura MVC" class="img-projects">
-  <strong>Blog Simples — Arquitetura MVC</strong>
-  <p>Aplicação web construída em Node.js e Express que segue o padrão MVC (Model–View–Controller), separando responsabilidades em <em>models</em>, <em>views</em> e <em>controllers</em>.</p>
-  <p>Recursos: criar, visualizar e excluir postagens de blog por meio de uma interface simples e intuitiva. Os <strong>Models</strong> lidam com a lógica de dados e o banco; as <strong>Views</strong> renderizam a interface; os <strong>Controllers</strong> processam entradas do usuário e fazem a ponte entre model e view.</p>
-  <p>Propósito: demonstrar na prática como o padrão MVC organiza o código e facilita a escalabilidade, tornando clara a interação entre as camadas.</p>
-  <p>Tecnologias: Node.js, Express, JavaScript, HTML, CSS</p>
-  <a href="https://github.com/SEU_USUARIO/blog-mvc-simples" target="_blank" rel="noopener noreferrer">link para o projeto</a>
-</li>
+      <li class="projeto">
+        <img src="imagens/api-playlist.png" alt="Projeto APIs Playlist" class="img-projects">
+        <strong>APIS-PLAYLIST</strong>
+        <p>API RESTful em Node.js e Express para gerenciar playlists de música, com autenticação e autorização via JWT.</p>
+        <p>tecnologias: Node.js, Express, JWT, Postman</p>
+        <a href="https://github.com/tpsousa/api_playlist" target="_blank" rel="noopener noreferrer">ver projeto</a>
+      </li>
+
+      <li class="projeto">
+        <img src="imagens/arquitetura_mvc.png" alt="Aplicativo de Blog Simples com arquitetura MVC" class="img-projects">
+        <strong>Blog Simples — Arquitetura MVC</strong>
+        <p>Aplicação web construída em Node.js e Express que segue o padrão MVC (Model–View–Controller), separando responsabilidades em <em>models</em>, <em>views</em> e <em>controllers</em>.</p>
+        <p>Recursos: criar, visualizar e excluir postagens de blog por meio de uma interface simples e intuitiva. Os <strong>Models</strong> lidam com a lógica de dados e o banco; as <strong>Views</strong> renderizam a interface; os <strong>Controllers</strong> processam entradas do usuário e fazem a ponte entre model e view.</p>
+        <p>Propósito: demonstrar na prática como o padrão MVC organiza o código e facilita a escalabilidade, tornando clara a interação entre as camadas.</p>
+        <p>Tecnologias: Node.js, Express, JavaScript, HTML, CSS</p>
+        <a href="https://github.com/SEU_USUARIO/blog-mvc-simples" target="_blank" rel="noopener noreferrer">link para o projeto</a>
+      </li>
 
     </ul>
   </div>
