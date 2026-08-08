@@ -1,0 +1,206 @@
+/* ============================================================
+   AJUSTES PARA TELAS GRANDES (NOTEBOOK / DESKTOP)
+   ------------------------------------------------------------
+   Esse arquivo NÃO mexe no mobile — só aumenta espaçamentos,
+   fontes e imagens quando a tela é larga o suficiente (notebook
+   pra cima). Basta linkar esse arquivo DEPOIS do style.css:
+
+   <link rel="stylesheet" href="styles/style.css" />
+   <link rel="stylesheet" href="styles/desktop.css" />
+   ============================================================ */
+
+@media (min-width: 1024px) {
+
+  /* Containers gerais mais largos, aproveitando a tela */
+  .tecnologies,
+  .experiencias,
+  .projects,
+  .formacao-academica {
+    max-width: 1200px;
+  }
+
+  .perfil-e-info {
+    max-width: 1200px;
+    gap: 3rem;
+  }
+
+  /* ===== HEADER / PERFIL ===== */
+  .foto-perfil {
+    width: 260px;
+    height: 260px;
+  }
+
+  .info-perfil > h1 {
+    font-size: 3.4rem;
+  }
+
+  .sobre-mim {
+    font-size: 1.3rem;
+    max-width: 750px;
+  }
+
+  .side-bar li a {
+    font-size: 1.15rem;
+    padding: 0.6rem 1.3rem;
+  }
+
+  .link a,
+  .btn-curriculo {
+    font-size: 1.15rem;
+    padding: 0.7rem 1.5rem;
+  }
+
+  .link svg {
+    width: 46px;
+    height: 46px;
+  }
+
+  /* ===== SOBRE MIM ===== */
+  .sobre-container {
+    max-width: 1200px;
+    gap: 60px;
+  }
+
+  .sobre-texto {
+    max-width: 750px;
+  }
+
+  .sobre-texto h2 {
+    font-size: 2.4rem;
+  }
+
+  .sobre-texto p {
+    font-size: 1.3rem;
+    line-height: 1.8;
+  }
+
+  /* ===== PROJETOS ===== */
+  .h1-projetos {
+    font-size: 2.4rem;
+  }
+
+  .list-projects li.projeto {
+    flex: 0 0 560px;
+    padding: 1.6rem;
+    font-size: 1.25rem;
+    gap: 1.5rem;
+  }
+
+  .img-projects {
+    width: 190px;
+    height: 190px;
+  }
+
+  .list-projects p {
+    font-size: 1.05rem;
+  }
+
+  .list-projects a {
+    font-size: 1.05rem;
+  }
+
+  /* ===== TECNOLOGIAS ===== */
+  .tecnologies h2 {
+    font-size: 1.6rem;
+  }
+
+  .tech-logos img {
+    width: 100px;
+    height: 100px;
+  }
+
+  /* ===== SOFT SKILLS ===== */
+  .soft-skills h2 {
+    font-size: 2.6rem;
+    margin-bottom: 50px;
+  }
+
+  .skills-container {
+    max-width: 1200px;
+    gap: 30px;
+  }
+
+  .skill-card {
+    padding: 40px 25px;
+  }
+
+  .skill-card i {
+    font-size: 3rem;
+  }
+
+  .skill-card h3 {
+    font-size: 1.4rem;
+  }
+
+  /* ===== PUBLICAÇÕES ===== */
+  #h1-public {
+    font-size: 2.2rem;
+  }
+
+  .card {
+    flex: 0 0 340px;
+    padding: 1.3rem;
+  }
+
+  .publi-titulo {
+    font-size: 1.4rem;
+  }
+
+  .publi-descricao {
+    font-size: 1.05rem;
+  }
+
+  /* ===== CONTATOS / FORMULÁRIO ===== */
+  .contatos {
+    font-size: 2.3rem;
+    gap: 2.5rem;
+  }
+
+  .contato {
+    max-width: 720px;
+    padding: 2rem 2.5rem;
+  }
+
+  .contato h2 {
+    font-size: 1.8rem;
+  }
+
+  .contato-form input,
+  .contato-form textarea,
+  .contato-form button {
+    font-size: 1.05rem;
+    padding: 1rem;
+  }
+}
+
+/* Telas ainda maiores (monitores full HD+) — mais um empurrão */
+@media (min-width: 1440px) {
+
+  .tecnologies,
+  .experiencias,
+  .projects,
+  .formacao-academica,
+  .perfil-e-info,
+  .sobre-container,
+  .skills-container {
+    max-width: 1360px;
+  }
+
+  .foto-perfil {
+    width: 300px;
+    height: 300px;
+  }
+
+  .info-perfil > h1 {
+    font-size: 3.8rem;
+  }
+
+  .list-projects li.projeto {
+    flex: 0 0 620px;
+  }
+
+  .img-projects {
+    width: 210px;
+    height: 210px;
+  }
+}
