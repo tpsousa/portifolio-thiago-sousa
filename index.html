@@ -82,17 +82,17 @@
         <ul class="list-projects">
 
           <!-- ===== Projetos novos ===== -->
-
-          <li class="projeto">
-            <img src="imagens/pomboIA.jpeg" alt="Imagem do projeto Pombo IA" class="img-projects">
+          
+        <li class="projeto">
+            <img src="imagens/distill.jpeg" alt="Imagem do projeto Distill" class="img-projects">
             <div class="projeto-info">
-              <strong>Pombo IA — Entrega Confiável de Webhooks com Diagnóstico de Falhas por IA</strong>
-              <p>Serviço de entrega confiável de webhooks: recebe eventos via API e entrega com assinatura HMAC, retentativas, Dead Letter Topic e histórico auditável. Projeto em desenvolvimento.</p>
-              <p>Arquitetura com <strong>Transactional Outbox</strong> e <strong>Kafka</strong>, proteção contra SSRF e camada de IA planejada para diagnosticar falhas com motor de regras e modelo local (Ollama), saída em JSON validada e servidor MCP para investigar entregas por conversa.</p>
-              <p>tecnologias: Java 21, Spring Boot, PostgreSQL, Flyway, Kafka, Docker, Ollama, MCP</p>
-              <a href="https://github.com/tpsousa/PomboIA" target="_blank" rel="noopener noreferrer">link para o projeto</a>
+              <strong>Distill — Processamento Assíncrono de Documentos com LLM</strong>
+              <p>Backend em Java que recebe documentos, processa em segundo plano com um LLM e devolve um resumo, os pontos principais e tags. Projeto em desenvolvimento.</p>
+              <p>Upload direto para o S3 por <strong>URL pré-assinada</strong>, processamento via <strong>SQS</strong> com retry, <strong>DLQ</strong> e idempotência por escrita condicional no <strong>DynamoDB</strong>. O LLM fica atrás de uma interface, com <strong>Ollama</strong> local em desenvolvimento e <strong>Amazon Bedrock</strong> na AWS, e saída em JSON validada. Infraestrutura como código com <strong>AWS CDK</strong> em Java.</p>
+              <p>tecnologias: Java 21, Spring Boot, AWS (S3, SQS, DynamoDB, Bedrock, CloudWatch), AWS CDK, Ollama, Docker, LocalStack</p>
+              <a href="https://github.com/tpsousa/distill" target="_blank" rel="noopener noreferrer">link para o projeto</a>
             </div>
-          </li>
+         </li>
 
   
           <li class="projeto">
