@@ -73,3 +73,19 @@ leftArrow.addEventListener('click', () => {
 rightArrow.addEventListener('click', () => {
   container.scrollBy({ left: 300, behavior: 'smooth' });
 });
+
+const btnVerMais = document.getElementById('btn-ver-mais');
+const listaProjetos = document.querySelector('.list-projects');
+
+if (btnVerMais && listaProjetos) {
+  btnVerMais.addEventListener('click', () => {
+    const aberto = listaProjetos.classList.toggle('expandido');
+    btnVerMais.textContent = aberto ? 'Ver menos' : 'Ver mais projetos';
+    btnVerMais.setAttribute('aria-expanded', aberto);
+
+    // Ao recolher, volta para o topo da seção para o usuário não ficar perdido
+    if (!aberto) {
+      document.querySelector('.projects').scrollIntoView({ behavior: 'smooth' });
+    }
+  });
+}

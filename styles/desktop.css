@@ -79,6 +79,15 @@
     font-size: 2.4rem;
   }
 
+  /* Mostra só os 6 primeiros até clicar em "Ver mais" */
+  .list-projects:not(.expandido) li.projeto:nth-child(n+7) {
+    display: none;
+  }
+
+  .btn-ver-mais {
+    display: block;
+  }
+  
   /* Desktop: grade, sem scroll lateral. Todos os projetos aparecem de uma vez */
   .list-projects-container {
     display: block;
@@ -199,7 +208,7 @@
   .projeto-info > strong {
     font-size: 1.3rem;
   }
-  
+
 }
 
 /* Telas ainda maiores (monitores full HD+) — mais um empurrão */

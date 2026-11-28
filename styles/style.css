@@ -432,6 +432,29 @@ nav {
   color: #121212;
 }
 
+/* Botão "Ver mais" (só aparece no desktop) */
+.btn-ver-mais {
+  display: none;
+  margin: 2rem auto 0;
+  padding: 0.7rem 1.8rem;
+  background: transparent;
+  border: 1.8px solid #61dafb;
+  border-radius: 25px;
+  color: #61dafb;
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-ver-mais:hover,
+.btn-ver-mais:focus {
+  background-color: #61dafb;
+  color: #121212;
+  outline: none;
+}
+
 /* Scrollbar */
 .list-projects-container::-webkit-scrollbar { height: 10px; }
 .list-projects-container::-webkit-scrollbar-track { background: #121212; border-radius: 5px; }
