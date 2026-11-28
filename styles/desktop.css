@@ -85,7 +85,7 @@
   }
 
   .btn-ver-mais {
-    display: block;
+    display: flex;
   }
   
   /* Desktop: grade, sem scroll lateral. Todos os projetos aparecem de uma vez */

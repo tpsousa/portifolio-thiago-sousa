@@ -63,8 +63,11 @@ const listaProjetos = document.querySelector('.list-projects');
 if (btnVerMais && listaProjetos) {
   btnVerMais.addEventListener('click', () => {
     const aberto = listaProjetos.classList.toggle('expandido');
-    btnVerMais.textContent = aberto ? 'Ver menos' : 'Ver mais projetos';
     btnVerMais.setAttribute('aria-expanded', aberto);
+
+    const rotulo = aberto ? 'Ver menos projetos' : 'Ver mais projetos';
+    btnVerMais.setAttribute('aria-label', rotulo);
+    btnVerMais.setAttribute('title', rotulo);
 
     // Ao recolher, volta para o topo da seção
     if (!aberto) {
