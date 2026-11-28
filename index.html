@@ -84,153 +84,163 @@
           <!-- ===== Projetos novos ===== -->
           
         <li class="projeto">
-            <img src="imagens/distill.jpeg" alt="Imagem do projeto Distill" class="img-projects">
-            <div class="projeto-info">
-              <strong>Distill — Processamento Assíncrono de Documentos com LLM</strong>
-              <p>Backend em Java que recebe documentos, processa em segundo plano com um LLM e devolve um resumo, os pontos principais e tags. Projeto em desenvolvimento.</p>
-              <p>Upload direto para o S3 por <strong>URL pré-assinada</strong>, processamento via <strong>SQS</strong> com retry, <strong>DLQ</strong> e idempotência por escrita condicional no <strong>DynamoDB</strong>. O LLM fica atrás de uma interface, com <strong>Ollama</strong> local em desenvolvimento e <strong>Amazon Bedrock</strong> na AWS, e saída em JSON validada. Infraestrutura como código com <strong>AWS CDK</strong> em Java.</p>
-              <p>tecnologias: Java 21, Spring Boot, AWS (S3, SQS, DynamoDB, Bedrock, CloudWatch), AWS CDK, Ollama, Docker, LocalStack</p>
-              <a href="https://github.com/tpsousa/distill" target="_blank" rel="noopener noreferrer">link para o projeto</a>
-            </div>
-         </li>
-
-          <li class="projeto">
-            <img src="imagens/pomboIA.jpeg" alt="Imagem do projeto Pombo IA" class="img-projects">
-            <div class="projeto-info">
-              <strong>Pombo IA — Entrega Confiável de Webhooks com Diagnóstico de Falhas por IA</strong>
-              <p>Serviço de entrega confiável de webhooks: recebe eventos via API e entrega com assinatura HMAC, retentativas, Dead Letter Topic e histórico auditável. Projeto em desenvolvimento.</p>
-              <p>Arquitetura com <strong>Transactional Outbox</strong> e <strong>Kafka</strong>, proteção contra SSRF e camada de IA planejada para diagnosticar falhas com motor de regras e modelo local (Ollama), saída em JSON validada e servidor MCP para investigar entregas por conversa.</p>
-              <p>tecnologias: Java 21, Spring Boot, PostgreSQL, Flyway, Kafka, Docker, Ollama, MCP</p>
-              <a href="https://github.com/tpsousa/PomboIA" target="_blank" rel="noopener noreferrer">link para o projeto</a>
-            </div>
-          </li>
-
-          <li class="projeto">
-            <img src="imagens/clinica-app.jpeg" alt="Imagem do projeto Clinica App" class="img-projects">
-            <div class="projeto-info">
-              <strong>Clinica App — Sistema de Gestão de Clínica Médica</strong>
-              <p>Aplicação web para gestão de clínica médica, com agenda em grade por profissional, cadastro de pacientes e controle de consultas por status (agendada, confirmada, realizada, cancelada e falta). Desenvolvida como projeto freelance.</p>
-              <p>API REST em <strong>Node.js</strong> e <strong>TypeScript</strong> com autenticação JWT e perfis de acesso (admin, recepção e médico), modelagem com <strong>Prisma</strong> e <strong>PostgreSQL</strong>, front-end em <strong>React</strong> com Vite e ambiente padronizado com <strong>Docker Compose</strong>.</p>
-              <p>tecnologias: Node.js, TypeScript, Express, Prisma, PostgreSQL, React, Vite, JWT, Docker</p>
-            </div>
-          </li>
-
-         
-<li class="projeto">
-    <img src="imagens/code-mentor-ia.jpeg" alt="Imagem do projeto CodeMentor AI" class="img-projects">
-
-    <div class="projeto-info">
-        <strong>CodeMentor AI — Mentor de Código com IA: Code Review, Testes e Explicações</strong>
-
-        <p>API REST que recebe um trecho de código e devolve uma análise feita por IA: code review com nota, problemas e código melhorado, geração de testes unitários JUnit 5 e explicações em três níveis, inclusive em streaming. Todas as análises ficam salvas em um histórico paginado</p>
-
-        <p>Integração com <strong>Spring AI</strong> com provedor intercambiável por configuração (<strong>Groq</strong> na nuvem ou modelos locais via <strong>Ollama</strong>), saídas estruturadas em JSON convertidas em objetos Java, prompts versionados em arquivos, streaming com <strong>SSE</strong>, migrations com <strong>Flyway</strong>, rate limit por IP e testes com a IA mockada.</p>
-
-        <p>tecnologias: Java 21, Spring Boot, Spring AI, PostgreSQL, Flyway, Docker, Groq, Ollama, SSE, OpenAPI/Swagger, JUnit</p>
-
-        <p class="reconhecimento">
-            <a href="https://hub.xerj.org/corpus/tpsousa--codementoria" target="_blank" rel="noopener noreferrer">
-                Selecionado para o XERJ Corpus Hub
-            </a>
-            — corpus de referência de código para agentes de IA.
-        </p>
-
-        <a href="https://github.com/tpsousa/CodeMentorIA" target="_blank" rel="noopener noreferrer">link para o projeto</a>
+  <img src="imagens/distill.jpeg" alt="Imagem do projeto Distill" class="img-projects">
+  <div class="projeto-info">
+    <strong>Distill — Processamento Assíncrono de Documentos com LLM</strong>
+    <p>Backend em Java que recebe documentos, processa em segundo plano com um LLM e devolve um resumo, os pontos principais e tags. Projeto em desenvolvimento.</p>
+    <p>Upload direto para o S3 por <strong>URL pré-assinada</strong>, processamento via <strong>SQS</strong> com retry, <strong>DLQ</strong> e idempotência por escrita condicional no <strong>DynamoDB</strong>. O LLM fica atrás de uma interface, com <strong>Ollama</strong> local em desenvolvimento e <strong>Amazon Bedrock</strong> na AWS, e saída em JSON validada. Infraestrutura como código com <strong>AWS CDK</strong> em Java.</p>
+    <div class="projeto-tags">
+      <span>Java 21</span><span>Spring Boot</span><span>AWS S3</span><span>SQS</span><span>DynamoDB</span><span>Bedrock</span><span>CloudWatch</span><span>AWS CDK</span><span>Ollama</span><span>Docker</span><span>LocalStack</span>
     </div>
+    <a href="https://github.com/tpsousa/distill" target="_blank" rel="noopener noreferrer">link para o projeto</a>
+  </div>
 </li>
 
+<li class="projeto">
+  <img src="imagens/pomboIA.jpeg" alt="Imagem do projeto Pombo IA" class="img-projects">
+  <div class="projeto-info">
+    <strong>Pombo IA — Entrega Confiável de Webhooks com Diagnóstico de Falhas por IA</strong>
+    <p>Serviço de entrega confiável de webhooks: recebe eventos via API e entrega com assinatura HMAC, retentativas, Dead Letter Topic e histórico auditável. Projeto em desenvolvimento.</p>
+    <p>Arquitetura com <strong>Transactional Outbox</strong> e <strong>Kafka</strong>, proteção contra SSRF e camada de IA planejada para diagnosticar falhas com motor de regras e modelo local (Ollama), saída em JSON validada e servidor MCP para investigar entregas por conversa.</p>
+    <div class="projeto-tags">
+      <span>Java 21</span><span>Spring Boot</span><span>PostgreSQL</span><span>Flyway</span><span>Kafka</span><span>Docker</span><span>Ollama</span><span>MCP</span>
+    </div>
+    <a href="https://github.com/tpsousa/PomboIA" target="_blank" rel="noopener noreferrer">link para o projeto</a>
+  </div>
+</li>
 
-          <li class="projeto" id="projetos">
-            <img src="imagens/Gemini_Generated_Image_y6fzypy6fzypy6fz.png" alt="Imagem do projeto DSCatalog" class="img-projects">
-            <div class="projeto-info">
-              <strong>DSCatalog — API REST de Catálogo de Produtos</strong>
-              <p>API REST desenvolvida em Spring Boot para gerenciamento de produtos e categorias, com relacionamento N:N, paginação, ordenação e autenticação via Spring Security.</p>
-              <p>Arquitetura em camadas (<strong>Controller</strong>, <strong>Service</strong>, <strong>Repository</strong>, <strong>Entity</strong>), uso de <strong>DTOs</strong> para desacoplamento da API, tratamento de exceções customizadas e persistência com JPA/Hibernate, H2 e PostgreSQL.</p>
-              <p>tecnologias: Java, Spring Boot, Spring Data JPA, Spring Security, PostgreSQL, H2, Maven</p>
-              <a href="https://github.com/tpsousa/Gcatalog" target="_blank" rel="noopener noreferrer">link para o projeto</a>
-              <!-- TODO: substituir "seu-usuario" pelo link real do repositório -->
-            </div>
-          </li>
+<li class="projeto">
+  <img src="imagens/clinica-app.jpeg" alt="Imagem do projeto Clinica App" class="img-projects">
+  <div class="projeto-info">
+    <strong>Clinica App — Sistema de Gestão de Clínica Médica</strong>
+    <p>Aplicação web para gestão de clínica médica, com agenda em grade por profissional, cadastro de pacientes e controle de consultas por status (agendada, confirmada, realizada, cancelada e falta). Desenvolvida como projeto freelance.</p>
+    <p>API REST em <strong>Node.js</strong> e <strong>TypeScript</strong> com autenticação JWT e perfis de acesso (admin, recepção e médico), modelagem com <strong>Prisma</strong> e <strong>PostgreSQL</strong>, front-end em <strong>React</strong> com Vite e ambiente padronizado com <strong>Docker Compose</strong>.</p>
+    <div class="projeto-tags">
+      <span>Node.js</span><span>TypeScript</span><span>Express</span><span>Prisma</span><span>PostgreSQL</span><span>React</span><span>Vite</span><span>JWT</span><span>Docker</span>
+    </div>
+  </div>
+</li>
 
-          <li class="projeto" id="projetos">
-            <img src="imagens/aether-img.jpeg" alt="Imagem do projeto Aether" class="img-projects">
-            <div class="projeto-info">
-              <strong>Aether — Interpretador de Linguagem de Script</strong>
-              <p>IDE com interpretador embutido para uma linguagem de script simplificada, desenvolvida em Java. Realiza análise léxica e sintática, e execução de comandos com suporte a variáveis, expressões aritméticas, estruturas condicionais e laços de repetição.</p>
-              <p>Arquitetura baseada nos padrões <strong>Visitor</strong>, <strong>Facade</strong> e <strong>MVC</strong>, com interface gráfica em Swing.</p>
-              <p>tecnologias: Java, Swing</p>
-              <a href="https://github.com/tpsousa/aether-script-engine" target="_blank" rel="noopener noreferrer">link para o projeto</a>
-              <!-- TODO: substituir "#" pelo link do repositório -->
-            </div>
-          </li>
+<li class="projeto">
+  <img src="imagens/code-mentor-ia.jpeg" alt="Imagem do projeto CodeMentor AI" class="img-projects">
+  <div class="projeto-info">
+    <strong>CodeMentor AI — Mentor de Código com IA: Code Review, Testes e Explicações</strong>
+    <p>API REST que recebe um trecho de código e devolve uma análise feita por IA: code review com nota, problemas e código melhorado, geração de testes unitários JUnit 5 e explicações em três níveis, inclusive em streaming. Todas as análises ficam salvas em um histórico paginado</p>
+    <p>Integração com <strong>Spring AI</strong> com provedor intercambiável por configuração (<strong>Groq</strong> na nuvem ou modelos locais via <strong>Ollama</strong>), saídas estruturadas em JSON convertidas em objetos Java, prompts versionados em arquivos, streaming com <strong>SSE</strong>, migrations com <strong>Flyway</strong>, rate limit por IP e testes com a IA mockada.</p>
+    <p class="reconhecimento">
+      <a href="https://hub.xerj.org/corpus/tpsousa--codementoria" target="_blank" rel="noopener noreferrer">Selecionado para o XERJ Corpus Hub</a>
+      — corpus de referência de código para agentes de IA.
+    </p>
+    <div class="projeto-tags">
+      <span>Java 21</span><span>Spring Boot</span><span>Spring AI</span><span>PostgreSQL</span><span>Flyway</span><span>Docker</span><span>Groq</span><span>Ollama</span><span>SSE</span><span>OpenAPI/Swagger</span><span>JUnit</span>
+    </div>
+    <a href="https://github.com/tpsousa/CodeMentorIA" target="_blank" rel="noopener noreferrer">link para o projeto</a>
+  </div>
+</li>
 
-          <li class="projeto" id="projetos">
-            <img src="imagens/dscommerce-img.png" alt="Imagem do projeto DSCommerce" class="img-projects">
-            <div class="projeto-info">
-              <strong>DSCommerce — E-commerce em React</strong>
-              <p>Aplicação front-end de e-commerce desenvolvida em React, com catálogo de produtos, carrinho de compras persistido em Local Storage, autenticação com rotas protegidas e área administrativa com CRUD completo.</p>
-              <p>Componentização reutilizável, roteamento com <strong>React Router</strong>, gerenciamento de estado global e consumo de API REST via hooks (<strong>useState</strong>, <strong>useEffect</strong>).</p>
-              <p>tecnologias: React, React Router, Context API, Local Storage, Axios</p>
-              <a href="https://github.com/seu-usuario/dscommerce" target="_blank" rel="noopener noreferrer">link para o projeto</a>
-              <!-- TODO: substituir "seu-usuario" pelo link real do repositório -->
-            </div>
-          </li>
+<li class="projeto">
+  <img src="imagens/Gemini_Generated_Image_y6fzypy6fzypy6fz.png" alt="Imagem do projeto DSCatalog" class="img-projects">
+  <div class="projeto-info">
+    <strong>DSCatalog — API REST de Catálogo de Produtos</strong>
+    <p>API REST desenvolvida em Spring Boot para gerenciamento de produtos e categorias, com relacionamento N:N, paginação, ordenação e autenticação via Spring Security.</p>
+    <p>Arquitetura em camadas (<strong>Controller</strong>, <strong>Service</strong>, <strong>Repository</strong>, <strong>Entity</strong>), uso de <strong>DTOs</strong> para desacoplamento da API, tratamento de exceções customizadas e persistência com JPA/Hibernate, H2 e PostgreSQL.</p>
+    <div class="projeto-tags">
+      <span>Java</span><span>Spring Boot</span><span>Spring Data JPA</span><span>Spring Security</span><span>PostgreSQL</span><span>H2</span><span>Maven</span>
+    </div>
+    <a href="https://github.com/tpsousa/Gcatalog" target="_blank" rel="noopener noreferrer">link para o projeto</a>
+  </div>
+</li>
 
-          <li class="projeto" id="projetos">
-            <img src="imagens/sistema-agendamento-medico.png" alt="Imagem do projeto Agenda Médica" class="img-projects">
-            <div class="projeto-info">
-              <strong>Agenda Médica — Sistema Web com Flask</strong>
-              <p>Aplicação web para gerenciamento de agendamentos médicos, desenvolvida em Flask seguindo o padrão application factory, organizada em blueprints de autenticação e agenda, com tela de login e listagem/busca de agendamentos integrada a um serviço de API separado (mockado em container próprio).</p>
-              <p>Arquitetura com <strong>Flask-SQLAlchemy</strong> para persistência de usuários, cliente HTTP isolado com tratamento de falhas (indisponibilidade, respostas inválidas, registros incompletos), tabela interativa no front-end com <strong>Tabulator.js</strong>, orquestração via <strong>Docker Compose</strong> e testes automatizados com <strong>Pytest</strong>.</p>
-              <p>tecnologias: Python, Flask, Flask-SQLAlchemy, SQLite, Docker, Pytest, Tabulator.js</p>
-              <a href="https://github.com/seu-usuario/agenda-medica" target="_blank" rel="noopener noreferrer">link para o projeto</a>
-              <!-- TODO: substituir "seu-usuario" pelo link real do repositório -->
-            </div>
-          </li>
+<li class="projeto">
+  <img src="imagens/aether-img.jpeg" alt="Imagem do projeto Aether" class="img-projects">
+  <div class="projeto-info">
+    <strong>Aether — Interpretador de Linguagem de Script</strong>
+    <p>IDE com interpretador embutido para uma linguagem de script simplificada, desenvolvida em Java. Realiza análise léxica e sintática, e execução de comandos com suporte a variáveis, expressões aritméticas, estruturas condicionais e laços de repetição.</p>
+    <p>Arquitetura baseada nos padrões <strong>Visitor</strong>, <strong>Facade</strong> e <strong>MVC</strong>, com interface gráfica em Swing.</p>
+    <div class="projeto-tags">
+      <span>Java</span><span>Swing</span>
+    </div>
+    <a href="https://github.com/tpsousa/aether-script-engine" target="_blank" rel="noopener noreferrer">link para o projeto</a>
+  </div>
+</li>
 
+<li class="projeto">
+  <img src="imagens/dscommerce-img.png" alt="Imagem do projeto DSCommerce" class="img-projects">
+  <div class="projeto-info">
+    <strong>DSCommerce — E-commerce em React</strong>
+    <p>Aplicação front-end de e-commerce desenvolvida em React, com catálogo de produtos, carrinho de compras persistido em Local Storage, autenticação com rotas protegidas e área administrativa com CRUD completo.</p>
+    <p>Componentização reutilizável, roteamento com <strong>React Router</strong>, gerenciamento de estado global e consumo de API REST via hooks (<strong>useState</strong>, <strong>useEffect</strong>).</p>
+    <div class="projeto-tags">
+      <span>React</span><span>React Router</span><span>Context API</span><span>Local Storage</span><span>Axios</span>
+    </div>
+    <a href="https://github.com/seu-usuario/dscommerce" target="_blank" rel="noopener noreferrer">link para o projeto</a>
+    <!-- TODO: substituir "seu-usuario" pelo link real do repositório -->
+  </div>
+</li>
 
-          <li class="projeto">
-            <img src="imagens/food-fast.jpeg" alt="Imagem do projeto FoodFast" class="img-projects">
-            <div class="projeto-info">
-              <strong>FoodFast</strong>
-              <p>Sistema de gestão de pedidos para restaurantes delivery com múltiplas filiais. Centraliza clientes, cardápio, pedidos, estoque e entregas, com uso de constraints, triggers e funções em PostgreSQL para automatizar regras de negócio.</p>
-              <p>tecnologias: PostgreSQL, SQL (DDL/DML), PL/pgSQL</p>
-              <a href="https://github.com/tpsousa/foodfast-backend-db" target="_blank" rel="noopener noreferrer">link para o projeto</a>
-            </div>
-          </li>
+<li class="projeto">
+  <img src="imagens/sistema-agendamento-medico.png" alt="Imagem do projeto Agenda Médica" class="img-projects">
+  <div class="projeto-info">
+    <strong>Agenda Médica — Sistema Web com Flask</strong>
+    <p>Aplicação web para gerenciamento de agendamentos médicos, desenvolvida em Flask seguindo o padrão application factory, organizada em blueprints de autenticação e agenda, com tela de login e listagem/busca de agendamentos integrada a um serviço de API separado (mockado em container próprio).</p>
+    <p>Arquitetura com <strong>Flask-SQLAlchemy</strong> para persistência de usuários, cliente HTTP isolado com tratamento de falhas (indisponibilidade, respostas inválidas, registros incompletos), tabela interativa no front-end com <strong>Tabulator.js</strong>, orquestração via <strong>Docker Compose</strong> e testes automatizados com <strong>Pytest</strong>.</p>
+    <div class="projeto-tags">
+      <span>Python</span><span>Flask</span><span>Flask-SQLAlchemy</span><span>SQLite</span><span>Docker</span><span>Pytest</span><span>Tabulator.js</span>
+    </div>
+    <a href="https://github.com/seu-usuario/agenda-medica" target="_blank" rel="noopener noreferrer">link para o projeto</a>
+    <!-- TODO: substituir "seu-usuario" pelo link real do repositório -->
+  </div>
+</li>
 
-          <li class="projeto">
-            <img src="imagens/skus-defrost.jpeg" alt="Imagem do projeto Desafio de Dimensionamento de Retiradas" class="img-projects">
-            <div class="projeto-info">
-              <strong>Desafio de Dimensionamento de Retiradas — Filial 7 (Grupo Mateus)</strong>
-              <p>Solução de análise de dados para dimensionar diariamente a quantidade de produtos a retirar dos freezers, considerando histórico de vendas, validade após descongelamento, lead time operacional e capacidade dos freezers — reduzindo desperdício e falta de estoque.</p>
-              <p>tecnologias: Python, Pandas, Scikit-learn, Prophet</p>
-              <a href="https://github.com/tpsousa/-Algorithm-Development-for-SKU-Defrost-Scheduling-in-Retail-Operations" target="_blank" rel="noopener noreferrer">link para o projeto</a>
-            </div>
-          </li>
+<li class="projeto">
+  <img src="imagens/food-fast.jpeg" alt="Imagem do projeto FoodFast" class="img-projects">
+  <div class="projeto-info">
+    <strong>FoodFast</strong>
+    <p>Sistema de gestão de pedidos para restaurantes delivery com múltiplas filiais. Centraliza clientes, cardápio, pedidos, estoque e entregas, com uso de constraints, triggers e funções em PostgreSQL para automatizar regras de negócio.</p>
+    <div class="projeto-tags">
+      <span>PostgreSQL</span><span>SQL (DDL/DML)</span><span>PL/pgSQL</span>
+    </div>
+    <a href="https://github.com/tpsousa/foodfast-backend-db" target="_blank" rel="noopener noreferrer">link para o projeto</a>
+  </div>
+</li>
 
-          <li class="projeto">
-            <img src="imagens/sqlmanagement.png" alt="API de Gerenciamento de Usuários com Sequelize e MySQL" class="img-projects">
-            <div class="projeto-info">
-              <strong>API User Management — Sequelize & MySQL</strong>
-              <p>API desenvolvida para gerenciamento de usuários, implementando operações de CRUD (Create, Read, Update, Delete) com o ORM <strong>Sequelize</strong> e banco de dados <strong>MySQL</strong>.</p>
-              <p>Recursos: organização em camadas (<em>models</em>, <em>views</em> e configuração de banco), integração com Sequelize para mapear entidades e consultas, além de endpoints REST para manipulação de dados de usuários.</p>
-              <p>Propósito: demonstrar como construir uma API estruturada utilizando ORM, conectando o Node.js a bancos relacionais de forma prática e eficiente.</p>
-              <p>Tecnologias: Node.js, Express, Sequelize, MySQL</p>
-              <a href="https://github.com/tpsousa/api-user-management-sequelize-mySQL" target="_blank" rel="noopener noreferrer">link para o projeto</a>
-            </div>
-          </li>  
+<li class="projeto">
+  <img src="imagens/skus-defrost.jpeg" alt="Imagem do projeto Desafio de Dimensionamento de Retiradas" class="img-projects">
+  <div class="projeto-info">
+    <strong>Desafio de Dimensionamento de Retiradas — Filial 7 (Grupo Mateus)</strong>
+    <p>Solução de análise de dados para dimensionar diariamente a quantidade de produtos a retirar dos freezers, considerando histórico de vendas, validade após descongelamento, lead time operacional e capacidade dos freezers — reduzindo desperdício e falta de estoque.</p>
+    <div class="projeto-tags">
+      <span>Python</span><span>Pandas</span><span>Scikit-learn</span><span>Prophet</span>
+    </div>
+    <a href="https://github.com/tpsousa/-Algorithm-Development-for-SKU-Defrost-Scheduling-in-Retail-Operations" target="_blank" rel="noopener noreferrer">link para o projeto</a>
+  </div>
+</li>
 
-           <li class="projeto">
-            <img src="imagens/maximum-clique.png" alt="" class="img-projects">
-            <div class="projeto-info">
-              <strong>Maior Comunidade Conectada Heurística</strong>
-              <p>Projeto de análise e otimização de redes usando heurísticas, focado em conectividade.</p>
-              <p>tecnologias: C</p>
-              <a href="https://github.com/tpsousa/trabalho-final-lp1" target="_blank" rel="noopener noreferrer">link para o projeto</a>
-            </div>
-          </li>
+<li class="projeto">
+  <img src="imagens/sqlmanagement.png" alt="API de Gerenciamento de Usuários com Sequelize e MySQL" class="img-projects">
+  <div class="projeto-info">
+    <strong>API User Management — Sequelize & MySQL</strong>
+    <p>API desenvolvida para gerenciamento de usuários, implementando operações de CRUD (Create, Read, Update, Delete) com o ORM <strong>Sequelize</strong> e banco de dados <strong>MySQL</strong>.</p>
+    <p>Recursos: organização em camadas (<em>models</em>, <em>views</em> e configuração de banco), integração com Sequelize para mapear entidades e consultas, além de endpoints REST para manipulação de dados de usuários.</p>
+    <p>Propósito: demonstrar como construir uma API estruturada utilizando ORM, conectando o Node.js a bancos relacionais de forma prática e eficiente.</p>
+    <div class="projeto-tags">
+      <span>Node.js</span><span>Express</span><span>Sequelize</span><span>MySQL</span>
+    </div>
+    <a href="https://github.com/tpsousa/api-user-management-sequelize-mySQL" target="_blank" rel="noopener noreferrer">link para o projeto</a>
+  </div>
+</li>
 
+<li class="projeto">
+  <img src="imagens/maximum-clique.png" alt="Imagem do projeto Maior Comunidade Conectada Heurística" class="img-projects">
+  <div class="projeto-info">
+    <strong>Maior Comunidade Conectada Heurística</strong>
+    <p>Projeto de análise e otimização de redes usando heurísticas, focado em conectividade.</p>
+    <div class="projeto-tags">
+      <span>C</span>
+    </div>
+    <a href="https://github.com/tpsousa/trabalho-final-lp1" target="_blank" rel="noopener noreferrer">link para o projeto</a>
+  </div>
+</li>
 
         </ul>
       </div>

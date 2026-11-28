@@ -74,29 +74,53 @@
     line-height: 1.8;
   }
 
-  /* ===== PROJETOS ===== */
+    /* ===== PROJETOS ===== */
   .h1-projetos {
     font-size: 2.4rem;
   }
 
+  /* Desktop: grade, sem scroll lateral. Todos os projetos aparecem de uma vez */
+  .list-projects-container {
+    display: block;
+    overflow: visible;
+    scroll-snap-type: none;
+  }
+
+  .list-projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+    gap: 2rem;
+  }
+
   .list-projects li.projeto {
-    flex: 0 0 560px;
-    padding: 1.6rem;
-    font-size: 1.25rem;
-    gap: 1.5rem;
+    flex: none;
   }
 
   .img-projects {
-    width: 190px;
-    height: 190px;
+    height: 230px;
+  }
+
+  .projeto-info {
+    padding: 1.6rem;
+    gap: 1rem;
+  }
+
+  .projeto-info h2,
+  .projeto-info h3,
+  .projeto-info h4 {
+    font-size: 1.3rem;
   }
 
   .list-projects p {
-    font-size: 1.05rem;
+    font-size: 1rem;
+  }
+
+  .projeto-info p:last-of-type {
+    font-size: 0.88rem;
   }
 
   .list-projects a {
-    font-size: 1.05rem;
+    font-size: 1rem;
   }
 
   /* ===== TECNOLOGIAS ===== */
@@ -171,6 +195,11 @@
     font-size: 1.05rem;
     padding: 1rem;
   }
+
+  .projeto-info > strong {
+    font-size: 1.3rem;
+  }
+  
 }
 
 /* Telas ainda maiores (monitores full HD+) — mais um empurrão */
@@ -194,13 +223,5 @@
   .info-perfil > h1 {
     font-size: 3.8rem;
   }
-
-  .list-projects li.projeto {
-    flex: 0 0 620px;
-  }
-
-  .img-projects {
-    width: 210px;
-    height: 210px;
-  }
+  
 }

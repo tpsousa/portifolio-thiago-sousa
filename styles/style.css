@@ -262,116 +262,186 @@ nav {
   margin: 3rem auto 5rem;
   padding: 2rem;
   background: #181818;
-  border-radius: 12px;
-  box-shadow: 0 0 20px #0288d1aa;
+  border-radius: 16px;
+  box-shadow: 0 0 0 1px rgba(2, 136, 209, 0.3), 0 10px 40px rgba(0, 0, 0, 0.5);
 }
 
 .h1-projetos {
   color: #81d4fa;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
   font-size: 2rem;
   text-align: center;
-  text-shadow: 0 0 5px #0288d1;
+  text-shadow: 0 0 8px rgba(2, 136, 209, 0.6);
 }
 
+/* Mobile/tablet: carrossel com "encaixe" a cada card */
 .list-projects-container {
   overflow-x: auto;
   display: flex;
-  gap: 1.5rem;
   scroll-behavior: smooth;
-  padding-bottom: 1rem;
+  scroll-snap-type: x mandatory;
+  padding: 0.5rem 0 1rem;
 }
 
 .list-projects {
   display: flex;
   gap: 1.5rem;
-  flex-wrap: nowrap; /* impede quebra de linha */
+  flex-wrap: nowrap;
+  list-style: none;
 }
 
+/* Card vertical */
 .list-projects li.projeto {
-  flex: 0 0 480px; /* largura fixa de cada card, mais larga para acomodar imagem + texto lado a lado */
+  flex: 0 0 320px;
   display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  gap: 1rem;
-  background: linear-gradient(135deg, #212121, #121212);
-  border: 2px solid #0288d1;
-  padding: 1.2rem;
-  border-radius: 12px;
-  color: #81d4fa;
-  font-weight: 600;
-  font-size: 1.1rem;
-  box-shadow: 0 0 15px #0288d1aa;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  cursor: grab;
+  flex-direction: column;
+  padding: 0;
+  overflow: hidden;
+  background: #1c1c1c;
+  border: 1px solid rgba(2, 136, 209, 0.45);
+  border-radius: 14px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  scroll-snap-align: start;
+  cursor: default;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
 .list-projects li.projeto:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 0 25px #64b5f6;
+  transform: translateY(-6px);
+  border-color: #64b5f6;
+  box-shadow: 0 10px 30px rgba(2, 136, 209, 0.35);
 }
 
 .img-projects {
-  width: 160px;
-  height: 160px;
-  flex-shrink: 0;
+  width: 100%;
+  height: 200px;
   object-fit: cover;
-  border-radius: 8px;
-  border: 1px solid #0288d1;
+  border: none;
+  border-radius: 0;
+  border-bottom: 1px solid rgba(2, 136, 209, 0.45);
+  transition: transform 0.4s ease;
+}
+
+.list-projects li.projeto:hover .img-projects {
+  transform: scale(1.04);
 }
 
 .projeto-info {
+  flex: 1;
   display: flex;
   flex-direction: column;
-  min-width: 0; /* evita que o texto estoure a largura do card */
+  gap: 0.8rem;
+  padding: 1.25rem;
+  min-width: 0;
 }
 
+/* Título (h2, h3 ou h4, o que você usa) */
+.projeto-info h2,
+.projeto-info h3,
+.projeto-info h4 {
+  color: #81d4fa;
+  font-size: 1.15rem;
+  line-height: 1.3;
+  font-weight: 700;
+}
+
+/* Descrição: peso normal, mais legível */
 .list-projects p {
+  margin: 0;
   color: #b0bec5;
-  margin: 0.5rem 0;
-  font-size: 0.95rem;
-  line-height: 1.4;
+  font-size: 0.92rem;
+  font-weight: 400;
+  line-height: 1.6;
 }
 
+/* Título do projeto (seu HTML usa <strong>) */
+.projeto-info > strong {
+  color: #81d4fa;
+  font-size: 1.15rem;
+  line-height: 1.3;
+  font-weight: 700;
+}
+
+/* Palavras-chave em destaque dentro da descrição */
+.list-projects p strong {
+  color: #e0e0e0;
+  font-weight: 600;
+}
+
+/* Tags de tecnologias */
+.projeto-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  padding-top: 0.9rem;
+  border-top: 1px dashed rgba(97, 218, 251, 0.3);
+}
+
+.projeto-tags span {
+  padding: 0.25rem 0.7rem;
+  border: 1px solid rgba(97, 218, 251, 0.5);
+  border-radius: 999px;
+  color: #81d4fa;
+  font-size: 0.78rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* Selo "Selecionado para o XERJ Corpus Hub" */
+.projeto-info .reconhecimento {
+  padding: 0.6rem 0.9rem;
+  background: rgba(97, 218, 251, 0.08);
+  border-left: 3px solid #61dafb;
+  border-radius: 6px;
+  font-size: 0.85rem;
+}
+
+.projeto-info .reconhecimento a {
+  display: inline;
+  margin: 0;
+  padding: 0;
+  border: none;
+  border-radius: 0;
+  font-size: inherit;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.projeto-info .reconhecimento a:hover {
+  background: none;
+  color: #21a1f1;
+}
+
+/* Link vira botão, sempre no rodapé do card */
 .list-projects a {
+  margin-top: auto;
+  align-self: flex-start;
   display: inline-block;
-  margin-top: 0.5rem;
-  font-size: 0.95rem;
-  color: #64b5f6;
-  border-bottom: 1px solid transparent;
-  transition: border-color 0.25s ease;
+  padding: 0.5rem 1.2rem;
+  border: 1.8px solid #61dafb;
+  border-radius: 25px;
+  color: #61dafb;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.list-projects a:hover {
-  border-color: #64b5f6;
+.list-projects a:hover,
+.list-projects a:focus {
+  background-color: #61dafb;
+  color: #121212;
 }
 
-/* Chrome, Edge, Safari */
-.list-projects-container::-webkit-scrollbar {
-  height: 10px; /* altura da barra horizontal */
-}
-
-.list-projects-container::-webkit-scrollbar-track {
-  background: #121212; /* cor do fundo da barra */
-  border-radius: 5px;
-}
-
+/* Scrollbar */
+.list-projects-container::-webkit-scrollbar { height: 10px; }
+.list-projects-container::-webkit-scrollbar-track { background: #121212; border-radius: 5px; }
 .list-projects-container::-webkit-scrollbar-thumb {
-  background: #0288d1; /* cor do “polegar” da barra */
+  background: #0288d1;
   border-radius: 5px;
-  border: 2px solid #181818; /* espaço entre thumb e track */
+  border: 2px solid #181818;
 }
-
-.list-projects-container::-webkit-scrollbar-thumb:hover {
-  background: #64b5f6; /* hover azul claro */
-}
-
-/* Firefox */
-.list-projects-container {
-  scrollbar-width: thin;
-  scrollbar-color: #0288d1 #121212;
-}
-
+.list-projects-container::-webkit-scrollbar-thumb:hover { background: #64b5f6; }
+.list-projects-container { scrollbar-width: thin; scrollbar-color: #0288d1 #121212; }
 
 /* FOOTER */
 .footer {
@@ -435,7 +505,7 @@ nav {
 
   .img-projects {
     width: 100%;
-    height: 140px;
+    height: 180px;
   }
 }
 
@@ -675,7 +745,10 @@ nav {
 }
 
 
-.btn-curriculo {
+btn-curriculo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   background-color: #181818;
   font-size: 1rem;
   padding: 0.5rem 1.2rem;
@@ -685,17 +758,14 @@ nav {
   transition: all 0.3s ease;
   user-select: none;
   font-weight: 600;
-
 }
 
-.btn-curriculo :hover,
-.btn-curriculo:focus{
+.btn-curriculo:hover,
+.btn-curriculo:focus {
   background-color: #61dafb;
   color: #121212;
   outline: none;
 }
-
-
 
 /* diminuir header */
 
